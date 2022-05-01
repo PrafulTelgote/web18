@@ -1,0 +1,54 @@
+body
+    {
+        background-color: azure;
+    }
+    #h11
+    {
+        text-align: center;
+    }
+
+    .box{
+        margin: auto;
+        
+    }
+    .box>#form
+    {
+        width: 40%;
+        height: 50%;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+
+    }
+    #navbar
+    {
+        height: 50px;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: bold;
+    }
+    #navbar>div>a{
+        color: black;
+    }
+    #display
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(4,1fr);
+        gap: 10px;
+    }
+    #display>div
+    {
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    }

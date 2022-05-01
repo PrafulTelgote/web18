@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BackEnd</title>
+</head>
+<link rel="stylesheet" href="common.css">
+<body>
+    <div id="navbar">
+        <div><a href="frontend.html">Fron-End</a></div>
+        <div><a href="backend.html">Back-End</a></div>
+    </div>
+    <h1 id="h11">This is BackEnd</h1>
+    <div class="box">
+        <form id="form">
+            <input type="text" id="img" placeholder="Upload Your Image URL"/>
+            <input type="text" id="name" placeholder="Name Of Investor"/>
+            <input type="text" id="position" placeholder="Position"/>
+            <input type="text" id="logo" placeholder="Logo URL"/>
+            <input type="submit" id="submit"/>
+        </form>
+    </div>
+</body>
+</html>
+<script>
+    var form=document.querySelector("#form");
+    form.addEventListener("submit",myfunction);
+    var arrayobj=JSON.parse(localStorage.getItem("dataobj")) || [];
+
+
+    function myfunction()
+    {
+        event.preventDefault()
+        var data={
+            image:form.img.value,
+            name:form.name.value,
+            position:form.position.value,
+            logo:form.logo.value,
+        };
+        arrayobj.push(data);
+        localStorage.setItem("dataobj",JSON.stringify(arrayobj));
+    }
+</script>

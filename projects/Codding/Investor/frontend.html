@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FrontEnd</title>
+</head>
+<link rel="stylesheet" href="common.css">
+<body>
+    <div id="navbar">
+        <div><a href="frontend.html">Fron-End</a></div>
+        <div><a href="backend.html">Back-End</a></div>
+    </div>
+    <h1 id="h11">This is The FrontEnd</h1>   
+    <div id="display">
+        <!--Append data here-->
+
+    </div> 
+</body>
+</html>
+<script>
+    var inve=JSON.parse(localStorage.getItem("dataobj"));
+    inve.forEach(function (elem)
+    {
+        var box=document.createElement("div");
+        var img=document.createElement("img");
+        img.setAttribute("src",elem.image);
+        var name=document.createElement("h2");
+        name.innerText=elem.name;
+        var pos=document.createElement("h2");
+        pos.innerText=elem.position;
+        var logo=document.createElement("img");
+        logo.setAttribute("src",elem.logo);
+        box.append(img,name,pos,logo);
+        document.querySelector("#display").append(box);
+    })
+    
+
+</script>
